@@ -1,6 +1,7 @@
-About Main class:
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Main class:
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -101,8 +102,8 @@ public class Main {
     }
 }
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 It takes user input to choose one of the ten exercises and then performs the corresponding calculation by calling the appropriate method from the other classes 
 called Problem1, Problem2, Problem3, Problem4, Problem5, Problem6, Problem7, Problem8, Problem9, and Problem10. In the main method, a Scanner object is created to read 
 input from the console. The input is then stored in the userInput variable. The switch statement is used to execute a particular case based on the user input.
@@ -111,10 +112,10 @@ classes, and then prints the result. For example, if the user enters "ex1", the 
 method from Problem1 to find the minimum value in the array, and then prints the result.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem1 class:
+# Problem1 class:
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 public class Problem1 {
     // n - length of array
     // arr - array
@@ -130,18 +131,19 @@ public class Problem1 {
     }
 }
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 A class called Problem1 with a static method findMin that takes an array of integers arr and its length n as input and returns the minimum value in the array.
 The method uses a recursive approach to find the minimum value. If the array has only one element, the method simply returns that element. Otherwise, it recursively 
 calls itself with the array of length n-1 and assigns the minimum value found to the variable min. The method then returns the minimum value between min and the last 
 element in the array arr[n-1], using the Math.min() method.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem2 class:
+# Problem2 class:
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+## Code
 public class Problem2 {
     // n - length of array
     // arr - array
@@ -156,8 +158,8 @@ public class Problem2 {
     }
 }
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 This code defines a method named calculateAverage() that takes an integer array arr and its length n as parameters, and returns the average of all the elements of the 
 array as a double value. The method uses recursion to compute the average of the elements in the array. It first checks if the length of the array is 0. If the length 
 is 0, the method returns 0. Otherwise, it uses the formula (arr[n-1] + (n-1)*calculateAverage(arr, n-1))/n to calculate the average of the first n-1 elements of the 
@@ -167,10 +169,10 @@ of elements in the array excluding the n-th element, and the calculateAverage(ar
 returns the computed average.
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem3 class:
+# Problem3 class:
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 public class Problem3 {
     // n - input number
     // i - default number for checking conditions, which equals to 2
@@ -189,8 +191,8 @@ public class Problem3 {
     }
 }
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 The purpose of the isPrime method is to determine whether a given input number n is prime or not. The method takes two parameters, n and i, where n is the input number
 to be checked and i is an integer value used as a counter for checking whether n is divisible by any number other than 1 and itself. The implementation of the isPrime 
 method starts by checking if the input number n is less than 2. If n is less than 2, the method immediately returns false, since 1 is not considered a prime number.
@@ -201,12 +203,12 @@ parameters n and i+1. This continues the process of checking whether n is divisi
 itself until all possible factors of n have been checked. Overall, this implementation of the isPrime method uses a recursive algorithm to check whether a given input 
 number is prime. It checks for factors of n by incrementally increasing a counter i until i squared is greater than n or until a factor other than 1 and n has been 
 found.
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem4 class:
+# Problem4 class:
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 class Problem4 {
     // n - input number
     // return - returns the factorial of n
@@ -219,16 +221,16 @@ class Problem4 {
     }
 }
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 The implementation uses recursion to compute the factorial of a given input. If the input "n" is zero, the method immediately returns 1 since 0! is defined to be 1. 
 Otherwise, the method computes the factorial of "n-1" and multiplies it by "n" to obtain the factorial of "n".
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem5 class:
+# Problem5 class:
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 public class Problem5 {
     // n - input number
     // return - returns  nth term in the Fibonacci series
@@ -241,8 +243,8 @@ public class Problem5 {
     }
 }
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 The calculateFibonacci method takes an integer n as input and returns the nth term in the Fibonacci series. If n is equal to 0 or 1, the method simply returns n. 
 Otherwise, the method recursively calls itself with n-1 and n-2 as arguments, adds the results, and returns the sum. For example, if we call calculateFibonacci(6), 
 the method first checks if n is equal to 0 or 1, which it is not. So it calls itself with n-1 and n-2 as arguments: calculateFibonacci(5) and calculateFibonacci(4). 
@@ -250,12 +252,12 @@ The method continues to recursively call itself with smaller values of n until n
 previous recursive calls, adding them together until it reaches the final result. In this example, calculateFibonacci(5) will return 5, calculateFibonacci(4) will 
 return 3, and so on. The method will finally return the sum of calculateFibonacci(5) and calculateFibonacci(4), which is 8, which is the 6th number in the Fibonacci 
 series.
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem6 class:
+# Problem6 class:
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 class Problem6 {
     // n - input number
     // a - power of n
@@ -272,19 +274,19 @@ class Problem6 {
     }
 }
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 A class Problem6 that contains a static method named calculatePower, which takes two integers n and a as input parameters and returns an integer. The method calculates the 
 power of n raised to a using recursion. The first conditional statement checks if the base n is 0, in which case the result would always be 0, so it returns 0. The 
 second conditional statement checks if the power a is 0. In this case, the result would always be 1 (any number raised to 0 is 1), so it returns 1. If none of the 
 above conditions are met, then the method recursively calls itself by reducing the power a by 1 until a is equal to 0, and multiplies the result with n at each step. 
 Finally, it returns the result obtained from the recursive calls.
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem7 class:
+# Problem7 class:
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 public class Problem7 {
     // i - starting element index
     // j - ending element index
@@ -302,8 +304,8 @@ public class Problem7 {
     }
 }
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 The purpose of the reverseArray method is to reverse the order of the elements in the input array between the indices i and j. It does this recursively by swapping the
 elements at the i and j indices, and then recursively calling itself with i incremented by 1 and j decremented by 1. This continues until i is no longer less than j, 
 at which point the method returns the reversed array. public static int[] reverseArray(int[] arr, int i, int j){: This line declares the reverseArray method with an 
@@ -313,12 +315,12 @@ arr[i]=arr[j];: This line sets the value of the element at index i equal to the 
 at index j equal to the value of the temporary variable temp, which is the original value of the element at index i. reverseArray(arr, i+1, j-1);: This line recursively
 calls the reverseArray method with the same array (arr) and with i incremented by 1 and j decremented by 1. This will continue to swap elements until i is no longer 
 less than j. return arr;: This line returns the reversed array once all the elements have been swapped.
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem8 class:
+# Problem8 class:
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 public class Problem8 {
     // s - string
     // firstChar - first symbol of string
@@ -337,8 +339,8 @@ public class Problem8 {
     }
 }
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 The aim of the isAllDigits method is to check whether all the characters in the input string are digits. It does this recursively by checking the first character 
 of the input string, and then recursively calling itself with the remaining string (i.e., the input string with the first character removed).
 public static boolean isAllDigits(String s){: This line declares the isAllDigits method with a string parameter s.
@@ -354,10 +356,10 @@ return isDigit && restDigits;: This line returns true if the first character of 
 digits (restDigits is true). Otherwise, it returns false.
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem9 class:
+# Problem9 class:
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 public class Problem9 {
     // basis: (n!)/(((n-k)!)*(k!))
     // n - input number
@@ -372,8 +374,8 @@ public class Problem9 {
     }
 }
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 The goal of the calculateBinomialCoefficient method is to calculate the binomial coefficient of n and k using a recursive algorithm. The binomial coefficient is the
 number of ways k items can be selected from a set of n items, and is denoted by the symbol n choose k.
 The algorithm used in the calculateBinomialCoefficient method is based on the following formula: n choose k = (n!)/(((n-k)!)*(k!)).
@@ -387,10 +389,10 @@ the formula n choose k = (n-1 choose k-1) + (n-1 choose k). It does this by call
 to the result of calling the calculateBinomialCoefficient method with n-1 and k. The recursion terminates when k is equal to 0 or n, at which point the method returns 1.
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-About Problem10 class:
+# Problem10 class:
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Code
 public class Problem10 {
     // a and b - input numbers
     // return - returns great common divisor of a and b
@@ -401,8 +403,8 @@ public class Problem10 {
     }
 }
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Explanation
 The purpose of the calculateGCD method is to calculate the greatest common divisor (GCD) of a and b using a recursive algorithm. The greatest common divisor of two 
 integers a and b is the largest integer that divides both a and b without leaving a remainder.
 public static int calculateGCD(int a, int b) {: This line declares the calculateGCD method with two integer parameters a and b.
